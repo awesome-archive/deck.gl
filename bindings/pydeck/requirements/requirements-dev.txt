@@ -1,0 +1,20 @@
+jupyter>=1.0.0
+pandas>=0.23.4
+geopandas  # used by examples/geopandas_integration.py, needed for docs build (make html)
+pytest>=4.0.2
+pytest-cov>=2.6.1
+pytest-asyncio>=0.10.0
+flake8
+requests
+sphinx
+recommonmark
+jupyterlab
+ipython>=5.8.0
+setuptools
+semver # necessary for PEP440-compliant semantic versions
+sphinx-markdown-builder
+wheel
+sphinx_rtd_theme==2.0.0
+black
+playwright  # used by docs/scripts/snap_thumbnails.py for gallery screenshots
+Pillow  # used by docs/scripts/snap_thumbnails.py for thumbnail resizing

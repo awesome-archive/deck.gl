@@ -2,64 +2,112 @@
   <a href="https://npmjs.org/package/deck.gl">
     <img src="https://img.shields.io/npm/v/deck.gl.svg?style=flat-square" alt="version" />
   </a>
-  <a href="https://travis-ci.org/uber/deck.gl">
-    <img src="https://img.shields.io/travis/uber/deck.gl/master.svg?style=flat-square" alt="build" />
+  <a href="https://github.com/visgl/deck.gl/actions?query=workflow%3Atest+branch%3Amaster">
+    <img src="https://github.com/visgl/deck.gl/workflows/test/badge.svg?branch=master" alt="build" />
   </a>
   <a href="https://npmjs.org/package/deck.gl">
-    <img src="https://img.shields.io/npm/dm/deck.gl.svg?style=flat-square" alt="downloads" />
+    <img src="https://img.shields.io/npm/dm/@deck.gl/core.svg?style=flat-square" alt="downloads" />
   </a>
-  <a href="http://starveller.sigsev.io/uber/deck.gl">
-    <img src="http://starveller.sigsev.io/api/repos/uber/deck.gl/badge" alt="stars" />
+  <a href='https://coveralls.io/github/visgl/deck.gl?branch=master'>
+    <img src='https://img.shields.io/coveralls/visgl/deck.gl.svg?style=flat-square' alt='Coverage Status' />
   </a>
 </p>
 
-<h1 align="center">deck.gl | <a href="https://uber.github.io/deck.gl">Docs</a></h1>
+<h1 align="center">deck.gl | <a href="https://deck.gl">Website</a></h1>
 
-<h5 align="center">A WebGL overlay suite for React providing a set of highly performant data visualization overlays</h5>
+<h5 align="center"> GPU-powered, highly performant large-scale data visualization</h5>
 
-[![docs](http://i.imgur.com/mvfvgf0.jpg)](https://uber.github.io/deck.gl)
+[![docs](http://i.imgur.com/mvfvgf0.jpg)](https://visgl.github.io/deck.gl)
 
-Provides tested, highly performant layers for data visualization
-use cases, such as scatterplots, choropleths etc in 2 and 3 dimensions.
 
-    npm install --save deck.gl
+deck.gl is designed to simplify high-performance, WebGL2/WebGPU based visualization of large data sets. Users can quickly get impressive visual results with minimal effort by composing existing layers, or leverage deck.gl's extensible architecture to address custom needs.
 
-## Example
+deck.gl maps **data** (usually an array of JSON objects) into a stack of visual **layers** - e.g. icons, polygons, texts; and look at them with **views**: e.g. map, first-person, orthographic.
 
-```javascript
-import DeckGL from 'deck.gl/react';
-import {ArcLayer} from 'deck.gl';
+deck.gl handles a number of challenges out of the box:
 
-const flights = new ArcLayer({
-  id: 'flights',
-  data: [] // Some flight points
-});
+* Performant rendering and updating of large data sets
+* Interactive event handling such as picking, highlighting and filtering
+* Cartographic projections and integration with major basemap providers
+* A catalog of proven, well-tested layers
 
-<DeckGL width={1920} height={1080} layers={[flights]} />
+Deck.gl is designed to be highly customizable. All layers come with flexible APIs to allow programmatic control of each aspect of the rendering. All core classes such are easily extendable by the users to address custom use cases.
+
+## Flavors
+
+### Script Tag
+
+```html
+<script src="https://unpkg.com/deck.gl@latest/dist.min.js"></script>
 ```
 
-Take a look at the [docs website](https://uber.github.io/deck.gl)
-or browse the [docs folder](./docs).
+- [Get started](/docs/get-started/using-standalone.md#using-the-scripting-api)
+- [Full examples](https://github.com/visgl/deck.gl/tree/master/examples/get-started/scripting)
 
-## Developing
+### NPM Module
 
-    npm install
-    npm test
-    npm start
+```bash
+npm install deck.gl
+```
 
-#### Node Version Requirement
+#### Pure JS
 
-Building deck.gl from source has a dependency on node `0.12` or higher.
-Either upgrade to a newest version, or install something like [nvm](https://github.com/creationix/nvm).
+- [Get started](/docs/get-started/using-standalone.md)
+- [Full examples](/examples/get-started/pure-js)
+
+#### React
+
+- [Get started](/docs/get-started/using-with-react.md)
+- [Full examples](/examples/get-started/react)
+
+### Python
+
+```bash
+pip install pydeck
+```
+
+- [Get started](https://deckgl.readthedocs.io/en/latest/installation.html)
+- [Examples](https://deckgl.readthedocs.io/en/latest/layer.html)
+
+### Third-Party Goodies
+
+- [deckgl-typings](https://github.com/danmarshall/deckgl-typings) (Typescript)
+- [mapdeck](https://symbolixau.github.io/mapdeck/articles/mapdeck.html) (R)
+- [vega-deck.gl](https://github.com/microsoft/SandDance/tree/master/packages/vega-deck.gl) ([Vega](https://vega.github.io/))
+- [earthengine-layers](https://earthengine-layers.com/) ([Google Earth Engine](https://earthengine.google.com/))
+- [deck.gl-native](https://github.com/UnfoldedInc/deck.gl-native) (C++)
+- [deck.gl-raster](https://github.com/kylebarron/deck.gl-raster/) (Computation on rasters)
+
+## Learning Resources
+
+* [API documentation](https://deck.gl/docs) for the latest release
+* [Website demos](https://deck.gl/examples) with links to source
+* [Interactive playground](https://deck.gl/playground)
+* [deck.gl Codepen demos](https://codepen.io/vis-gl/)
+* [deck.gl Observable demos](https://beta.observablehq.com/@pessimistress)
+* [vis.gl Medium blog](https://medium.com/vis-gl)
+* [deck.gl Slack workspace](https://slack-invite.openjsf.org/)
 
 ## Contributing
 
-PRs and bug reports are welcome. Note that you once your PR is
-about to be merged, your will be asked to register as a contributor
-by filling in a short form.
+deck.gl is part of vis.gl, an [OpenJS Foundation](https://openjsf.org/) project. Read the [contribution guidelines](/CONTRIBUTING.md) if you are interested in contributing.
 
-## Data sources
 
-[SF OpenData](https://data.sfgov.org)
-[TLC Trip Record Data](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
-[Mapzen](https://mapzen.com/)
+## Attributions
+
+#### Data sources
+
+Data sources are listed in each example.
+
+
+#### The deck.gl project is supported by
+
+<a href="https://www.unfolded.ai"><img src="https://raw.githubusercontent.com/visgl/deck.gl-data/master/images/branding/unfolded.png" height="32" /></a>
+<a href="https://www.foursquare.com"><img src="https://raw.githubusercontent.com/visgl/deck.gl-data/master/images/branding/fsq.svg" height="40" /></a>
+
+<a href="https://www.carto.com"><img src="https://raw.githubusercontent.com/visgl/deck.gl-data/master/images/branding/carto.svg" height="48" /></a>
+
+<a href="https://www.mapbox.com"><img src="https://raw.githubusercontent.com/visgl/deck.gl-data/master/images/branding/mapbox.svg" height="44" /></a>
+<a href="https://www.uber.com"><img src="https://raw.githubusercontent.com/visgl/deck.gl-data/master/images/branding/uber.png" height="40" /></a>
+
+<a href="https://www.browserstack.com/"><img src="https://d98b8t1nnulk5.cloudfront.net/production/images/static/logo.svg" alt="BrowserStack" width="200" /></a>

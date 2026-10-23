@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "vite --open",
+    "start-local": "vite --config ../vite.config.local.mjs"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}

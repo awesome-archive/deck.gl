@@ -1,0 +1,60 @@
+{
+  "name": "@deck.gl/test-utils",
+  "description": "Test utilities for deck.gl layers",
+  "license": "MIT",
+  "type": "module",
+  "version": "9.4.0-beta.4",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "webgl",
+    "visualization",
+    "overlay",
+    "layer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/visgl/deck.gl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/visgl/deck.gl/issues"
+  },
+  "homepage": "https://deck.gl",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./vitest": {
+      "types": "./dist/vitest.d.ts",
+      "import": "./dist/vitest.js",
+      "require": "./dist/vitest.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "dependencies": {
+    "@luma.gl/test-utils": "^10.0.0-alpha.4",
+    "@luma.gl/webgl": "^10.0.0-alpha.4"
+  },
+  "peerDependencies": {
+    "@deck.gl/core": "~9.4.0",
+    "@luma.gl/core": "~10.0.0-alpha.4",
+    "@luma.gl/engine": "~10.0.0-alpha.4",
+    "@probe.gl/test-utils": "^4.1.1",
+    "vitest": "^4.0.18"
+  },
+  "peerDependenciesMeta": {
+    "vitest": {
+      "optional": true
+    }
+  },
+  "gitHead": "13ace64fc2cee08c133afc882fc307253489a4e4"
+}
